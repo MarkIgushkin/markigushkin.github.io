@@ -1,0 +1,15 @@
+.carousel-inner {
+    max-height: 600px;
+    img {
+      max-height: 600px;
+    }
+  }
+
+.product .content-img img{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.product{
+    margin-top: 3rem;
+}
