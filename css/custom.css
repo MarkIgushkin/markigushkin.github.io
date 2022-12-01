@@ -1,0 +1,31 @@
+.carousel-inner {
+    max-height: 600px;
+    img {
+      max-height: 600px;
+    }
+  }
+
+.product .content-img img{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.product{
+    margin-top: 3rem;
+}
+
+.navbar{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog .filtered{
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog .product{
+  /*transition: all 0.5s ease-out;*/
+}

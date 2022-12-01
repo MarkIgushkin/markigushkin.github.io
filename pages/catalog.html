@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Custom-->
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Document</title>
+    <!--Jquery-->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <!--Js-->
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Catalog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>  
+    </nav>
+    <!--end of navbar-->
+
+    <div class="container">
+        <h2 class="text-center">Catalog</h2>
+        <div class="row filter-radio">
+          <div class="col-12">
+      
+            <input type="radio" id="all" name="filter" value="all">
+            <label for="all">All</label>
+            
+            <input type="radio" id="option1" name="filter" value="option1">
+            <label for="option1">Option 1</label>
+            
+            <input type="radio" id="option2" name="filter" value="option2">
+            <label for="option2">Option 2</label>
+
+            <input type="radio" id="option3" name="filter" value="option3">
+            <label for="option3">Option 3</label>
+        
+          </div>
+        </div>
+        
+        <div class="row catalog">
+            <div class="col-3 product option1">
+                <div class="content pt-4">
+                    <a href="./product.html">
+                        <img class="w-100" src="../images/empty.jpg" alt="">
+                        <p>Product name</p>
+                        <p>10€</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 product option2">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option3">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option2">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option1">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option3">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option1">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+            <div class="col-3 product option2">
+                <div class="content pt-4">
+                    <img class="w-100" src="../images/empty.jpg" alt="">
+                    <p>Product name</p>
+                    <p>10€</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!--footer-->
+      <div class="container">
+        <footer class="row row-cols-5 py-5 my-5 border-top">
+          <div class="col">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <p class="text-muted">© 2021</p>
+          </div>
+      
+          <div class="col">
+      
+          </div>
+      
+          <div class="col">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+        </footer>
+
+
+    <!--Bootstrap script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
