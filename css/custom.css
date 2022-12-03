@@ -1,9 +1,145 @@
-.carousel-inner {
-    max-height: 600px;
-    img {
-      max-height: 600px;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat&family=Courgette&family=Dancing+Script:wght@400;500;700&family=Fjalla+One&family=Francois+One&family=Freehand&family=Fuzzy+Bubbles:wght@700&family=Island+Moments&family=Josefin+Slab:wght@100&family=Klee+One&family=Nanum+Myeongjo&family=Open+Sans:wght@600&family=Pacifico&family=Permanent+Marker&family=Quicksand:wght@300&display=swap');
+
+
+.snow-container {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  background-color: red;
+}
+
+.snow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-animation: snow linear infinite;
+          animation: snow linear infinite;
+}
+.snow.foreground {
+  background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+.snow.foreground.layered {
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+.snow.middleground {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+.snow.middleground.layered {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+.snow.background {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+}
+.snow.background.layered {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
   }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+  }
+}
+
+@keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+  }
+}
+
+#header{
+  background: url(../images/basehome.jpg) top/cover no-repeat;
+}
+.carousel-inner h1{
+    font-size: 90px;
+    font-family: Pacifico;
+}
+.carousel-inner h2{
+    font-family: Caveat;
+}
+.carousel-inner p{
+    font-family: Quicksand；
+    position absolute;
+    top:0px;
+}
+.carousel-item .btn{
+   border-radius: 12px;
+    background-color: black; 
+    color: white;
+}
+.carousel-item .btn:hover{
+    border-color: var(--pink)!important;
+    background-color: black; 
+    color: white;
+    border-radius: 12px;
+}
+
+
+
+:root {
+  --text-color: #0F1111;
+  --a-hover-color: #D6001C;
+}
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--a-hover-color);
+}
+
+h1{
+  margin-top: 2rem !important;
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center!important;
+  margin-bottom: 2rem !important;
+}
+
+.catalog .price{
+  font-weight: bold;
+}
+
+.catalog .p-name{
+  font-size: 14px;
+  margin-top: 1rem;
+}
 
 .product .content-img img{
     padding-left: 5rem;
@@ -26,6 +162,182 @@
     margin: 0;
 }
 
-.catalog .product{
-  /*transition: all 0.5s ease-out;*/
+.scale{
+  transition: transform .2s ease-in-out;
+}
+
+.scale:hover {
+  transform: scale(1.03);
+}
+
+.filter-radio input{
+  display: none;
+}
+
+.filter-radio label{
+  cursor: pointer;
+  border:2px solid var(--a-hover-color);
+  border-radius: 30px;
+  min-width: 70px;
+  padding: 6px 15px;
+  font-weight: 600;
+}
+
+.filter-radio input:checked + label, .filter-radio input:hover + label{
+  background-color: var(--a-hover-color);
+  color: white;
+}
+
+.filter-radio{
+  text-align: center;
+}
+
+
+.navbar-brand{
+  font-weight: bold;
+}
+
+.nav-link{
+  color: var(--text-color);
+}
+
+.nav-link:hover{
+  color:var(--a-hover-color);
+}
+
+.product.details h1{
+  text-align: left!important;
+  margin-top: 0px;
+  font-size: 23px;
+}
+
+.product.details .price{
+  font-weight: bold;
+  font-size: 20px;
+  border-top: 1px solid #e7e7e7;
+  padding-top: 20px;
+}
+
+.product.details h2{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product.details ul{
+  font-size: 14px;
+}
+
+.product.details .about{
+  border-top: 1px solid #e7e7e7;
+  padding-top: 25px;
+}
+
+.shoping-card span{
+  position: absolute;
+  left: 100%;
+  top:0;
+  transform: translate(-50%,-50%)!important;
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: var(--a-hover-color);
+  border-radius: 50%;
+}
+
+.fa{
+  font-size: 18px;
+}
+
+.add-to-card, #checkout-btn{
+  font-weight: 600;
+  border: 2px solid var(--a-hover-color);
+  border-radius: 30px;
+  min-width: 250px;
+  padding: 6px 15px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.add-to-card:hover, #checkout-btn:hover{
+  background-color: var(--a-hover-color);
+  color:white;
+}
+
+.stores img{
+  max-width: 200px;
+}
+
+.store-name{
+  font-weight: bold;
+}
+
+.store-details *{
+  font-size: 14px;
+}
+
+img{
+  max-width: 100%;
+}
+
+#summary .title{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#summary img{
+  max-width: 90%;
+}
+
+#summary{
+  font-size: 14px;
+}
+
+a.navbar-brand:hover {
+  color:var(--text-color);
+}
+
+#checkout-form{
+  padding: 25px;
+  background-color: #f8f9fa!important;
+  border-radius: 15px;
+}
+
+#checkout-form *{
+  font-size: 14px;
+}
+
+#remove-itm-btn, .close{
+  border-radius: 30px;
+  float: right;
+  min-width: 250px;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  border:2px solid #6c757d;
+}
+
+#remove-itm-btn:hover, .close:hover{
+  background-color: #6c757d;
+  color: white;
+}
+
+.no-items{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.close{
+  margin: 0 auto;
+}
+
+#header{
+  height: 80vh;
 }

@@ -57,5 +57,116 @@ $(document).ready(function(){
     });
 
 
+    //const map = new Map();
+
+    //map.set('a', 1);
+
+    $("#add-to-card").click(function(event){
+
+        values = JSON.parse(window.sessionStorage.getItem('map'));
+
+        if(values == null){
+            map = new Map();
+        }else{
+            map = new Map(Object.entries(values));
+        }
+
+        productId = $("#product-info").attr("data-product-id");
+        productPrice = $("#product-info").attr("data-price");
+        prodcutName = $("h1").text();
+        src = "../images/product" + productId + "-min.jpg";
+
+        if(map.has(productId)){
+            obj = map.get(productId);
+            obj.quantity = obj.quantity + 1;
+            console.log(obj);
+            map.set(productId, obj);
+            console.log(obj);
+        }else{
+            obj = new Order();
+            obj.id = productId;
+            obj.name = prodcutName;
+            obj.src = src;
+            obj.quantity = 1;
+            obj.price = productPrice;
+            map.set(productId, obj);
+            console.log(obj);
+        }
+
+        window.sessionStorage.setItem('map', JSON.stringify(Object.fromEntries(map)));
+
+        updateCard();
+
+        new bootstrap.Modal($("#added")).toggle();
+    }); 
+
+    $("#remove-itm-btn").click(function(event){
+        new bootstrap.Modal($("#removed")).toggle();
+    });
+
+    class Order {
+        id;
+        quantity;
+        price;
+        src;
+        name;
+    }
+
+    $("#remove-app").click(function(){
+        clearStorage();
+    });
+
+
+    updateCard();
+    updateCheckoutPage();
+
+    function clearStorage(){
+        window.sessionStorage.setItem('map', '{}');
+        location.reload();
+    };
+
+    function updateCard() {
+        counter = 0;
+
+        values = JSON.parse(window.sessionStorage.getItem('map'));
+
+        if(values == null){
+            return;
+        }else{
+            map = new Map(Object.entries(values));
+        }
+
+        map.forEach(value => {
+            counter += value.quantity; 
+        });
+
+        $('#quantity').text(counter);
+    }
+
+    function updateCheckoutPage() {
+        counter = 0;
+
+        if(jQuery.isEmptyObject(values)){
+            $("#summary").append(
+                "<div class=\"col-12 no-items\">No items have been added yet!</div>"
+            );
+            $("#remove-itm-btn").hide();
+            $("#checkout-btn").prop("disabled", true);
+            return;
+        }else{
+            map = new Map(Object.entries(values));
+        }
+
+        map.forEach(value => {
+            $("#summary").append("<div class=\"col-3\"><img src=" + value.src + " alt=\"product\"></div>");
+            $("#summary").append("<div class=\"col-3\"><p>" + value.name + "</p></div>");
+            $("#summary").append("<div class=\"col-2\"><p>" + value.quantity + "</p></div>");
+            $("#summary").append("<div class=\"col-2\"><p>€ " + value.price + "</p></div>");
+            $("#summary").append("<div class=\"col-2\"><p>€ " + value.price * value.quantity + "</p></div>");
+        });
+    }
+
+
+
 
 });

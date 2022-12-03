@@ -9,49 +9,94 @@
     <!--Custom-->
     <link rel="stylesheet" href="../css/custom.css">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand col-4" href="#">
+          <img src="../images/santa-claus.png" style="width:40px;" alt="">
+          <span> Christmas.ie</span>
+        </a>
+
+        <div class = "order-lg-2 nav-btns shoping-card">
+          <button type = "button" class = "btn position-relative">
+              <i class = "fa fa-shopping-cart"></i>
+              <span id="quantity">0</span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./catalog.html">Catalog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Find a Store</a>
-              </li>
-            </ul>
-          </div>
         </div>
-    </div>  
-    </nav>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./catalog.html">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find out store</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>  
+  </nav>
     <!--end of navbar-->
 
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Find out stores</h2>
+                <h1>Find our stores</h1>
             </div>
             <div class="col-12">
                 <iframe src="https://www.google.com/maps/d/embed?mid=10QPU5gIQ6_RnRhdZRtxTq363Zsx5znU&hl=en&ehbc=2E312F" height="480" class="w-100""></iframe>
             </div>
             <div class="col-12">
-                <p>Store 1</p>
-            </div>
-            <div class="col-12">
-                <p>Store 2</p>
-            </div>
-            <div class="col-12">
-                <p>Store 3</p>
+              <table class="table stores">
+                <tbody>
+                  <tr>
+                    <td><img src="../images/store1.jpg" alt=""></td>
+                    <td class="store-name">Christmas store</td>
+                    <td class="store-details">
+                        <p>Paradise Street</p>
+                        <p>Liverpool, L1 3EU</p>
+                        <p>00 44 (0) 15 17 07 93 10</p>
+                        <p>Open today until 8:00 PM</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="../images/store2.jpg" alt=""></td>
+                    <td class="store-name">Christmas store</td>
+                    <td class="store-details">
+                      <p>Paradise Street</p>
+                      <p>Liverpool, L1 3EU</p>
+                      <p>00 44 (0) 15 17 07 93 10</p>
+                      <p>Open today until 8:00 PM</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="../images/store3.jpg" alt=""></td>
+                    <td class="store-name">Christmas store</td>
+                    <td class="store-details">
+                      <p>Paradise Street</p>
+                      <p>Liverpool, L1 3EU</p>
+                      <p>00 44 (0) 15 17 07 93 10</p>
+                      <p>Open today until 8:00 PM</p>
+                      <p>HOURS & FULL STORE DETAILSFOR THE NORTH FACE STORE LIVERPOOL</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
     </div>
