@@ -705,6 +705,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d9497a",endCo
 }
 }
 
+@media only screen and (max-width:768px){
+  .category2, .category3 {
+    margin-top: 100px;
+  }
+}
+
 .animation {
   display: block;
   height: 100%;
