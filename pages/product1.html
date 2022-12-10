@@ -1,160 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Bootstrap css-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!--Custom-->
-  <link rel="stylesheet" href="../css/custom.css">
-  <title>Document</title>
-  <!--Jquery-->
-  <script src="../js/jquery-3.6.1.min.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Custom-->
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Main</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--Jquery-->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand col-4" href="#">
-          <img src="../images/santa-claus.png" style="width:40px;" alt="">
-          <span> Christmas.ie</span>
+        <a class="navbar-brand col-4" href="../index.html">
+          <img src="../images/logo.png" style="width:60px;" alt="">
+          <span>GreetingCards.ie</span>
         </a>
-
-        <div class = "order-lg-2 nav-btns shoping-card">
-          <a href="./checkout.html">
-            <button type = "button" class = "btn position-relative">
-              <i class = "fa fa-shopping-cart"></i>
+        <div class="order-lg-2 nav-btns shoping-card">
+            <button type="button" class="btn position-relative" onclick="location.href='./checkout.html'">
+              <i class="fa fa-shopping-cart"></i>
               <span id="quantity">0</span>
             </button>
-          </a>
         </div>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" href="#">Catalog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./catalog.html">Catalog</a>
+              <a class="nav-link" href="./find-store.html">Find our store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./find-store.html">Find out store</a>
+              <a class="nav-link" href="./why-us.html">Why us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faq.html">FAQ</a>
             </li>
           </ul>
         </div>
       </div>
-  </div>  
-  </nav>
-  <!--end of navbar-->
-
+    </nav>
+    <!--end of navbar-->
     <div id="prodict1" class="container product details">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="content-img">
-                    <img class="w-100" src="../images/product1.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4">
-              <h1>Jagowa 24pcs Christmas Greeting Card Christmas Cute Cartoon Blessing Small Card Gift Message Card Eco-Friendly Seasonal Greeting Card.</h1>
-              <p class="price" data-price="6.99" data-product-id="1" id="product-info">€ 6.99</p>  
-              <div class="about">
-                <h2>About this item</h2>
-                <ul>
-                  <li>Stylish and contemporary recycled Christmas cards in a Scandinavian inspired design style, send a message this year using eco friendly cards.</li>
-                  <li>Both the cards and the envelopes are made from recycled paper making them a better alternative to send to your friends and family than a lot of other cards.</li>
-                  <li>A6 size when folded: 14.8cm x 10.5cm</li>
-                  <li>48 recycled kraft brown envelopes which will make your Christmas cards look and feel a little different from a standard letter.</li>
-                  <li>48 cards, six designs and 8 copies of each design.</li>
-                </ul>
-              </div>
-              <button type="button" class="btn add-to-card" id="add-to-card">Add to card</button>
-            </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="content-img">
+            <img class="w-100" src="../images/product1.jpg" alt="">
+          </div>
         </div>
-    </div>
-
-      <!--footer-->
-      <div class="container">
-        <footer class="row row-cols-5 py-5 my-5 border-top">
-          <div class="col">
-            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <p class="text-muted">© 2021</p>
-          </div>
-      
-          <div class="col">
-      
-          </div>
-      
-          <div class="col">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        <div class="col-lg-4">
+          <h1>Jagowa 24pcs Christmas Greeting Card Christmas Cute Cartoon Blessing Small Card Gift Message Card Eco-Friendly Seasonal Greeting Card.</h1>
+          <p class="price" data-price="6.99" data-product-id="1" id="product-info">€ 6.99</p>
+          <div class="about">
+            <h2>About this item</h2>
+            <ul>
+              <li>Stylish and contemporary recycled Christmas cards in a Scandinavian inspired design style, send a message this year using eco friendly cards.</li>
+              <li>Both the cards and the envelopes are made from recycled paper making them a better alternative to send to your friends and family than a lot of other cards.</li>
+              <li>A6 size when folded: 14.8cm x 10.5cm</li>
+              <li>48 recycled kraft brown envelopes which will make your Christmas cards look and feel a little different from a standard letter.</li>
+              <li>48 cards, six designs and 8 copies of each design.</li>
             </ul>
           </div>
-      
-          <div class="col">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-            </ul>
-          </div>
-      
-          <div class="col">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-            </ul>
-          </div>
-        </footer>
+          <button type="button" class="btn add-to-card" id="add-to-card">Add to card</button>
+        </div>
       </div>
+    </div>
+    <!--footer-->
+    <div class="container">
+      <footer class="row row-cols-5 py-5 my-5 border-top">
+        <div class="col">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <p class="text-muted">© 2021</p>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
     <!--end of footer-->
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="added" tabindex="-1" aria-labelledby="addedModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addedModalLabel">Success</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            The product has been added to the cart!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn close" data-bs-dismiss="modal">Continue shopping</button>
+    <!-- Modal -->
+    <div class="modal fade" id="added" tabindex="-1" aria-labelledby="addedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addedModalLabel">Success</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> The product has been added to the cart! </div>
+          <div class="modal-footer">
+            <button type="button" class="btn close" data-bs-dismiss="modal">Continue shopping</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-
     <!--Bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!--My script-->
+    <!--Js-->
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>

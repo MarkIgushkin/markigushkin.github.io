@@ -100,10 +100,6 @@ $(document).ready(function(){
         new bootstrap.Modal($("#added")).toggle();
     }); 
 
-    $("#remove-itm-btn").click(function(event){
-        new bootstrap.Modal($("#removed")).toggle();
-    });
-
     class Order {
         id;
         quantity;
@@ -145,6 +141,7 @@ $(document).ready(function(){
 
     function updateCheckoutPage() {
         counter = 0;
+        total = 0;
 
         if(jQuery.isEmptyObject(values)){
             $("#summary").append(
@@ -155,18 +152,23 @@ $(document).ready(function(){
             return;
         }else{
             map = new Map(Object.entries(values));
+
+            map.forEach(value => {
+                $("#summary").append("<div class=\"col-3 mb-4\"><img src=" + value.src + " alt=\"product\"></div>");
+                $("#summary").append("<div class=\"col-3 mb-4\"><p>" + value.name + "</p></div>");
+                $("#summary").append("<div class=\"col-2 mb-4\"><p>" + value.quantity + "</p></div>");
+                $("#summary").append("<div class=\"col-2 mb-4\"><p>€ " + value.price + "</p></div>");
+                $("#summary").append("<div class=\"col-2 mb-4\"><p>€ " + value.price * value.quantity + "</p></div>");
+                total += value.price * value.quantity;
+            });
+            
+            $("#summary").append("<div class=\"col-8 mb-4\" style=\"text-align: center;\"><button class=\"btn\" id=\"remove-itm-btn\">Remove items</button></div>");
+            $("#summary").append("<div class=\"col-2 total mb-4\">Total:</div>");
+            $("#summary").append("<div class=\"col-2 total mb-4\"><p>€ " + total.toFixed(2) + "</p></div>");
+
+            $("#remove-itm-btn").click(function(event){
+                new bootstrap.Modal($("#removed")).toggle();
+            });
         }
-
-        map.forEach(value => {
-            $("#summary").append("<div class=\"col-3\"><img src=" + value.src + " alt=\"product\"></div>");
-            $("#summary").append("<div class=\"col-3\"><p>" + value.name + "</p></div>");
-            $("#summary").append("<div class=\"col-2\"><p>" + value.quantity + "</p></div>");
-            $("#summary").append("<div class=\"col-2\"><p>€ " + value.price + "</p></div>");
-            $("#summary").append("<div class=\"col-2\"><p>€ " + value.price * value.quantity + "</p></div>");
-        });
     }
-
-
-
-
 });
