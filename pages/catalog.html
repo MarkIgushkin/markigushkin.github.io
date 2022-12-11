@@ -16,7 +16,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"></noscript>
     <!--Jquery-->
-    <script defer src="../js/jquery-3.6.1.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!--Fontawesome-->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
@@ -79,7 +79,7 @@
         <div class="col-md-3 product option1 scale">
           <div class="content pt-4">
             <a href="./product1.html">
-              <img class="w-100" src="../images/product1-min.jpg" alt="">
+              <img class="w-100" src="../images/product1-min.webp" alt="">
               <p class="p-name">Jagowa 24pcs Christmas Greeting Card Christmas Cute Cartoon Blessing Small Card Gift Message Card Eco-Friendly Seasonal Greeting Card.</p>
               <p class="price">€6.99</p>
             </a>
@@ -88,7 +88,7 @@
         <div class="col-md-3 product option2 scale">
           <div class="content pt-4">
             <a href="./product2.html">
-              <img class="w-100" src="../images/product2-min.jpg" alt="">
+              <img class="w-100" src="../images/product2-min.webp" alt="">
               <p class="p-name">48 Recycled, Eco Friendly, Scandinavian Style Christmas Cards.</p>
               <p class="price">€13.95</p>
             </a>
@@ -97,7 +97,7 @@
         <div class="col-md-3 product option3 scale">
           <div class="content pt-4">
             <a href="./product3.html">
-              <img class="w-100" src="../images/product3-min.jpg" alt="">
+              <img class="w-100" src="../images/product3-min.webp" alt="">
               <p class="p-name">Cat Christmas Card - 'I'm Watching' UK Made by A Rare Breed. Xmas Scene with a Tabby and Presents in a Homely Scene. Seasonal Greeting Cards Printed Inside. Recyclable.</p>
               <p class="price">€3.45</p>
             </a>
@@ -106,7 +106,7 @@
         <div class="col-md-3 product option2 scale">
           <div class="content pt-4">
             <a href="./product4.html">
-              <img class="w-100" src="../images/product4-min.jpg" alt="">
+              <img class="w-100" src="../images/product4-min.webp" alt="">
               <p class="p-name">Pack of 8 Artistic Christmas Cards (MG-373805-XPE) - Festive Toy Shop - 8 Cards of 1 Design From the Christmas Classics Range by Museums & Galleries.</p>
               <p class="price">€6.90</p>
             </a>
@@ -114,10 +114,46 @@
         </div>
       </div>
     </div>
+
+    <!-- Subscription-->
+    <div id="subscription">
+      <div class="container subscription">
+        <div class="row">
+          <div class="col-4">
+            <h3>Subscribe to our newsletter</h3>
+          </div>
+          <div class="col-8">
+            <form class="needs-validation" novalidate id="subscription-form">
+              <div class="col-lg-7 my-md-2 my-2">
+                <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                <div class="invalid-feedback">Please, enter your email.</div>
+              </div>
+              <div class="col-lg-5 my-md-2 my-2">
+                <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sucess subscription modal -->
+    <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> You have subscribed to our newsletter. </div>
+        </div>
+      </div>
+    </div>
+
     <!--footer-->
     <div class="container">
-      <footer class="row row-cols-5 py-5 my-5 border-top">
-        <div class="col">
+      <footer class="row py-5 border-top">
+        <div class="col-md-3 col-6 my-3">
           <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
@@ -125,69 +161,78 @@
           </a>
           <p class="text-muted">© 2021</p>
         </div>
-        <div class="col"></div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
       </footer>
     </div>
+    <!--end of footer-->
 
     <div class="animation" style="background-image: url('../images/snow1.webp');"></div>
     <div class="animation" style="background-image: url('../images/snow2.webp');"></div>

@@ -105,79 +105,126 @@
                 </div>
             </div>
         </div>
-        <!--footer-->
-        <div class="container">
-            <footer class="row row-cols-5 py-5 my-5 border-top">
-                <div class="col">
-                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                    </a>
-                    <p class="text-muted">© 2021</p>
+
+            <!-- Subscription-->
+        <div id="subscription">
+            <div class="container subscription">
+            <div class="row">
+                <div class="col-4">
+                <h3>Subscribe to our newsletter</h3>
                 </div>
-                <div class="col"></div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Home</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Features</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">About</a>
-                        </li>
-                    </ul>
+                <div class="col-8">
+                <form class="needs-validation" novalidate id="subscription-form">
+                    <div class="col-lg-7 my-md-2 my-2">
+                    <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                    <div class="invalid-feedback">Please, enter your email.</div>
+                    </div>
+                    <div class="col-lg-5 my-md-2 my-2">
+                    <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
+                    </div>
+                </form>
                 </div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Home</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Features</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">About</a>
-                        </li>
-                    </ul>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Sucess subscription modal -->
+        <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Home</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Features</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted">About</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+                <div class="modal-body"> You have subscribed to our newsletter. </div>
+            </div>
+            </div>
+        </div>
+
+    <!--footer-->
+    <div class="container">
+        <footer class="row py-5 border-top">
+          <div class="col-md-3 col-6 my-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+            <p class="text-muted">© 2021</p>
+          </div>
+          <div class="col-md-3 col-6 my-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6 my-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6 my-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+      <!--end of footer-->
+
         </div>
         <div class="animation" style="background-image: url('../images/snow1.webp');"></div>
         <div class="animation" style="background-image: url('../images/snow2.webp');"></div>

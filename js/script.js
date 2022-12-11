@@ -8,8 +8,14 @@ $(document).ready(function(){
         .forEach(function (form) {
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
+                    event.preventDefault();
+                    event.stopPropagation();
+                }else{
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if($(form).attr('id') == 'subscription-form'){
+                        new bootstrap.Modal($("#sub-modal")).toggle();
+                    }
                 }
                 form.classList.add('was-validated')
             }, false)
@@ -170,5 +176,9 @@ $(document).ready(function(){
                 new bootstrap.Modal($("#removed")).toggle();
             });
         }
-    }
+    };
+
+    $('#sub-modal').on('hidden.bs.modal', function (e) {
+        location.reload();
+    });
 });
