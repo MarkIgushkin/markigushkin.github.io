@@ -20,6 +20,8 @@
     <!--Fontawesome-->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   </head>
   <body>
     <!--Navbar-->
@@ -64,7 +66,7 @@
     <div class="container">
       <h1>Frequently asked questions</h1>
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="wrap">
             <h2>Top questions</h2>
             <div class="accordion" id="myAcc">
@@ -101,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="wrap">
             <h2>Contact us</h2>
             <form class="needs-validation" id="faq-form" novalidate>
@@ -127,40 +129,53 @@
       </div>
     </div>
 
-        <!-- Subscription-->
-        <div id="subscription">
-          <div class="container subscription">
-            <div class="row">
-              <div class="col-4">
-                <h3>Subscribe to our newsletter</h3>
+    <!-- Subscription-->
+    <div id="subscription">
+      <div class="container subscription">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Subscribe to our newsletter</h3>
+          </div>
+          <div class="col-md-8">
+            <form class="needs-validation" novalidate id="subscription-form">
+              <div class="col-lg-7 my-md-2 my-2">
+                <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                <div class="invalid-feedback">Please, enter your email.</div>
               </div>
-              <div class="col-8">
-                <form class="needs-validation" novalidate id="subscription-form">
-                  <div class="col-lg-7 my-md-2 my-2">
-                    <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
-                    <div class="invalid-feedback">Please, enter your email.</div>
-                  </div>
-                  <div class="col-lg-5 my-md-2 my-2">
-                    <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
-                  </div>
-                </form>
+              <div class="col-lg-5 my-md-2 my-2">
+                <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
+      </div>
+    </div>
     
-        <!-- Sucess subscription modal -->
-        <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body"> You have subscribed to our newsletter. </div>
-            </div>
+    <!-- Sucess subscription modal -->
+    <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body"> You have subscribed to our newsletter. </div>
         </div>
+      </div>
+    </div>
+
+    <!-- General form subscription sucess modal -->
+    <div class="modal fade" id="form-modal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> The form has been successfully submitted.  The store's employees will contact you in the near future. Thanks! </div>
+        </div>
+      </div>
+    </div>
 
     <!--footer-->
     <div class="container">

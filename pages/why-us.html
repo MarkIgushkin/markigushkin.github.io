@@ -20,6 +20,8 @@
     <!--Fontawesome-->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   </head>
   <body>
     <!--Navbar-->
@@ -64,10 +66,10 @@
       <h1 class="text-center">Why Choose Us?</h1>
       <div class="row advantages">
         <div class="col-2"></div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <div id="adv1" class="back-img"></div>
         </div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <p class="subtitle">Great quality at affordable prices</p>
           <p class="advantage">Select a paper type to best match your stationery: silk paper offers a smooth surface and beautiful finish, glossy paper makes the colours look more vibrant, and brillian white matt paper is ideal for cards without photos.</p>
         </div>
@@ -75,21 +77,21 @@
       </div>
       <div class="row advantages">
         <div class="col-2"></div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <p class="subtitle">Real foil</p>
           <p class="advantage">The best just got better! Premium cards with real foil to add that "little something extra". Select between gold, silver or copper to best suit your preference.</p>
         </div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <div id="adv2" class="back-img"></div>
         </div>
         <div class="col-2"></div>
       </div>
       <div class="row advantages">
         <div class="col-2"></div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <div id="adv3" class="back-img"></div>
         </div>
-        <div class="col-4 adv">
+        <div class="col-md-4 adv">
           <p class="subtitle">Rounded corners</p>
           <p class="advantage">Its all in the details! Our rounded corner cards are all about small details done in a great way.</p>
         </div>
@@ -97,40 +99,54 @@
       </div>
     </div>
 
-        <!-- Subscription-->
-        <div id="subscription">
-          <div class="container subscription">
-            <div class="row">
-              <div class="col-4">
-                <h3>Subscribe to our newsletter</h3>
+    <!-- Subscription-->
+    <div id="subscription">
+      <div class="container subscription">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Subscribe to our newsletter</h3>
+          </div>
+          <div class="col-md-8">
+            <form class="needs-validation" novalidate id="subscription-form">
+              <div class="col-lg-7 my-md-2 my-2">
+                <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                <div class="invalid-feedback">Please, enter your email.</div>
               </div>
-              <div class="col-8">
-                <form class="needs-validation" novalidate id="subscription-form">
-                  <div class="col-lg-7 my-md-2 my-2">
-                    <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
-                    <div class="invalid-feedback">Please, enter your email.</div>
-                  </div>
-                  <div class="col-lg-5 my-md-2 my-2">
-                    <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
-                  </div>
-                </form>
+              <div class="col-lg-5 my-md-2 my-2">
+                <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
+      </div>
+    </div>
     
-        <!-- Sucess subscription modal -->
-        <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body"> You have subscribed to our newsletter. </div>
-            </div>
+    <!-- Sucess subscription modal -->
+    <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body"> You have subscribed to our newsletter. </div>
         </div>
+      </div>
+    </div>
+
+    <!-- General form subscription sucess modal -->
+    <div class="modal fade" id="form-modal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> The form has been successfully submitted.  The store's employees will contact you in the near future. Thanks! </div>
+        </div>
+      </div>
+    </div>
+
     <!--footer-->
     <div class="container">
       <footer class="row py-5 border-top">

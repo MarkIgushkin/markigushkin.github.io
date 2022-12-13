@@ -20,6 +20,8 @@
     <!--Fontawesome-->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   </head>
   <body>
     <!--Navbar-->
@@ -64,7 +66,7 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="content-img">
-            <img class="w-100" src="../images/product2.jpg" alt="">
+            <img class="w-100" src="../images/product2.webp" alt="">
           </div>
         </div>
         <div class="col-lg-4">
@@ -85,27 +87,27 @@
       </div>
     </div>
 
-        <!-- Subscription-->
-        <div id="subscription">
-          <div class="container subscription">
-            <div class="row">
-              <div class="col-4">
-                <h3>Subscribe to our newsletter</h3>
+    <!-- Subscription-->
+    <div id="subscription">
+      <div class="container subscription">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Subscribe to our newsletter</h3>
+          </div>
+          <div class="col-md-8">
+            <form class="needs-validation" novalidate id="subscription-form">
+              <div class="col-lg-7 my-md-2 my-2">
+                <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                <div class="invalid-feedback">Please, enter your email.</div>
               </div>
-              <div class="col-8">
-                <form class="needs-validation" novalidate id="subscription-form">
-                  <div class="col-lg-7 my-md-2 my-2">
-                    <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
-                    <div class="invalid-feedback">Please, enter your email.</div>
-                  </div>
-                  <div class="col-lg-5 my-md-2 my-2">
-                    <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
-                  </div>
-                </form>
+              <div class="col-lg-5 my-md-2 my-2">
+                <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
+      </div>
+    </div>
     
         <!-- Sucess subscription modal -->
         <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">

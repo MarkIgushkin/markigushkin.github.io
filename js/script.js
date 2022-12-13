@@ -15,6 +15,8 @@ $(document).ready(function(){
                     event.stopPropagation();
                     if($(form).attr('id') == 'subscription-form'){
                         new bootstrap.Modal($("#sub-modal")).toggle();
+                    }else{
+                        new bootstrap.Modal($("#form-modal")).toggle();
                     }
                 }
                 form.classList.add('was-validated')
@@ -62,11 +64,6 @@ $(document).ready(function(){
         }
     });
 
-
-    //const map = new Map();
-
-    //map.set('a', 1);
-
     $("#add-to-card").click(function(event){
 
         values = JSON.parse(window.sessionStorage.getItem('map'));
@@ -80,7 +77,7 @@ $(document).ready(function(){
         productId = $("#product-info").attr("data-product-id");
         productPrice = $("#product-info").attr("data-price");
         prodcutName = $("h1").text();
-        src = "../images/product" + productId + "-min.jpg";
+        src = "../images/product" + productId + "-min.webp";
 
         if(map.has(productId)){
             obj = map.get(productId);
@@ -179,6 +176,9 @@ $(document).ready(function(){
     };
 
     $('#sub-modal').on('hidden.bs.modal', function (e) {
+        location.reload();
+    });
+    $('#form-modal').on('hidden.bs.modal', function (e) {
         location.reload();
     });
 });
