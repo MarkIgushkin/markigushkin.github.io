@@ -14,6 +14,7 @@ $(document).ready(function(){
                 }else{
                     event.preventDefault();
                     event.stopPropagation();
+                    
                     if($(form).attr('id') == 'subscription-form'){
                         new bootstrap.Modal($("#sub-modal")).toggle();
                     }else{
@@ -196,12 +197,15 @@ $(document).ready(function(){
         }
     };
 
-    //Reload page after cloasing modal
+    //Reload page after cloasing subscription modal
     $('#sub-modal').on('hidden.bs.modal', function (e) {
         location.reload();
     });
-    //Reload page after cloasing modal
+    //Reload page after cloasing order modal
     $('#form-modal').on('hidden.bs.modal', function (e) {
+        if($('#form-modal').data('key') === 'checkout'){
+            window.sessionStorage.setItem('map', '{}');
+        }
         location.reload();
     });
 });
