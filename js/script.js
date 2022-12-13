@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // Form custom validation
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Documentation here - https://getbootstrap.com/docs/5.0/forms/validation/
     var forms = document.querySelectorAll('.needs-validation')
     
     // Loop over them and prevent submission
@@ -25,16 +26,18 @@ $(document).ready(function(){
 
 
 
+    //Filtering products in the catalog
     products = $('.catalog .product');
-
 
     $('input[type=radio][name=filter]').change(function() {
         
         duration = 500;
 
+        //Show all products
         if(this.value == 'all'){
             products.show(duration);
         }
+        //Show option1
         else if (this.value == 'option1') {
             products.each(function(){
                 if($(this).hasClass('option1')){
@@ -44,6 +47,7 @@ $(document).ready(function(){
                 }
             });
         }
+        //Show option2
         else if(this.value == 'option2'){
             products.each(function(){
                 if($(this).hasClass('option2')){
@@ -53,6 +57,7 @@ $(document).ready(function(){
                 }
             });
         }
+        //Show option3
         else if(this.value == 'option3'){
             products.each(function(){
                 if($(this).hasClass('option3')){
@@ -64,8 +69,11 @@ $(document).ready(function(){
         }
     });
 
+
+    //Adding products to local storage
     $("#add-to-card").click(function(event){
 
+        //Parsing JSON from local storage
         values = JSON.parse(window.sessionStorage.getItem('map'));
 
         if(values == null){
@@ -74,11 +82,13 @@ $(document).ready(function(){
             map = new Map(Object.entries(values));
         }
 
+        // Get data about product
         productId = $("#product-info").attr("data-product-id");
         productPrice = $("#product-info").attr("data-price");
         prodcutName = $("h1").text();
         src = "../images/product" + productId + "-min.webp";
 
+        // Save new product t the map
         if(map.has(productId)){
             obj = map.get(productId);
             obj.quantity = obj.quantity + 1;
@@ -96,13 +106,16 @@ $(document).ready(function(){
             console.log(obj);
         }
 
+        //Saving JSON to local storage with new product
         window.sessionStorage.setItem('map', JSON.stringify(Object.fromEntries(map)));
 
+        // Udate card for the user
         updateCard();
 
         new bootstrap.Modal($("#added")).toggle();
     }); 
 
+    // Order class that stores info about order
     class Order {
         id;
         quantity;
@@ -111,19 +124,23 @@ $(document).ready(function(){
         name;
     }
 
+    //On click remove products from card
     $("#remove-app").click(function(){
         clearStorage();
     });
 
 
+    //Update card and update checkout page every time the page loads
     updateCard();
     updateCheckoutPage();
 
+    //Clear storage function
     function clearStorage(){
         window.sessionStorage.setItem('map', '{}');
         location.reload();
     };
 
+    //Update card function
     function updateCard() {
         counter = 0;
 
@@ -142,10 +159,12 @@ $(document).ready(function(){
         $('#quantity').text(counter);
     }
 
+    //Update checkout page 
     function updateCheckoutPage() {
         counter = 0;
         total = 0;
 
+        // No items have been added
         if(jQuery.isEmptyObject(values)){
             $("#summary").append(
                 "<div class=\"col-12 no-items\">No items have been added yet!</div>"
@@ -153,7 +172,9 @@ $(document).ready(function(){
             $("#remove-itm-btn").hide();
             $("#checkout-btn").prop("disabled", true);
             return;
-        }else{
+        }
+        //Add all added items to page
+        else{
             map = new Map(Object.entries(values));
 
             map.forEach(value => {
@@ -175,9 +196,11 @@ $(document).ready(function(){
         }
     };
 
+    //Reload page after cloasing modal
     $('#sub-modal').on('hidden.bs.modal', function (e) {
         location.reload();
     });
+    //Reload page after cloasing modal
     $('#form-modal').on('hidden.bs.modal', function (e) {
         location.reload();
     });
