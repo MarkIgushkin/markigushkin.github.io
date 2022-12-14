@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></noscript>
     <!--Custom-->
     <link rel="stylesheet" href="../css/custom.css">
-    <title>Main</title>
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"></noscript>
     <!--Jquery-->
-    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script defer src="../js/jquery-3.6.1.min.js"></script>
     <!--Fontawesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <title>Help Center - GreetingCards.ie</title>
+    <!--Meta tags-->
+    <meta name="description" content="Frequently asked questions: delivery, return of goods.">
+    <meta name="keywords" content="find the answer, frequently asked questions, frequently asked, answers to questions, support service">
   </head>
   <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand col-4" href="../index.html">
-            <img src="../images/logo.png" style="width:60px;" alt="">
-            <span>GreetingCards.ie</span>
-          </a>
+          <img src="../images/logo.webp" style="width:60px;" alt="">
+          <span>GreetingCards.ie</span>
+        </a>
         <div class="order-lg-2 nav-btns shoping-card">
           <button type="button" class="btn position-relative" onclick="location.href='./checkout.html'">
             <i class="fa fa-shopping-cart"></i>
@@ -36,28 +44,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Catalog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./find-store.html">Find our store</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./why-us.html">Why us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./faq.html">FAQ</a>
-                </li>
-              </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./catalog.html">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./find-store.html">Find our store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./why-us.html">Why us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
     <!--end of navbar-->
+
     <div class="container">
       <h1>Frequently asked questions</h1>
       <div class="row">
-        <div class="col-6">
+        <!--Most frequent questions-->
+        <div class="col-md-6">
           <div class="wrap">
             <h2>Top questions</h2>
             <div class="accordion" id="myAcc">
@@ -94,7 +107,8 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <!--Contact us form-->
+        <div class="col-md-6">
           <div class="wrap">
             <h2>Contact us</h2>
             <form class="needs-validation" id="faq-form" novalidate>
@@ -119,10 +133,59 @@
         </div>
       </div>
     </div>
+
+    <!-- Subscription-->
+    <div id="subscription">
+      <div class="container subscription">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Subscribe to our newsletter</h3>
+          </div>
+          <div class="col-md-8">
+            <form class="needs-validation" novalidate id="subscription-form">
+              <div class="col-lg-7 my-md-2 my-2">
+                <input type="email" class="form-control px-4 border-0 w-100 text-center text-md-left" id="sub-email" placeholder="Your Email" name="email" required>
+                <div class="invalid-feedback">Please, enter your email.</div>
+              </div>
+              <div class="col-lg-5 my-md-2 my-2">
+                <button type="submit" class="btn btn-primary btn-lg border-0 w-100">Subscribe Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sucess subscription modal -->
+    <div class="modal fade" id="sub-modal" tabindex="-1" aria-labelledby="removedModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="removedModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> You have subscribed to our newsletter. </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- General form subscription sucess modal -->
+    <div class="modal fade" id="form-modal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel">Sucess!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> The form has been successfully submitted.  The store's employees will contact you in the near future. Thanks! </div>
+        </div>
+      </div>
+    </div>
+
     <!--footer-->
     <div class="container">
-      <footer class="row row-cols-5 py-5 my-5 border-top">
-        <div class="col">
+      <footer class="row py-5 border-top">
+        <div class="col-md-3 col-6 my-3">
           <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
@@ -130,72 +193,85 @@
           </a>
           <p class="text-muted">© 2021</p>
         </div>
-        <div class="col"></div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md-3 col-6 my-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./catalog.html" class="nav-link p-0 text-muted">Catalog</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+              <a href="./about.html" class="nav-link p-0 text-muted">About us</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+              <a href="./find-store.html" class="nav-link p-0 text-muted">Find our store</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a href="./why-us.html" class="nav-link p-0 text-muted">Why us</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./faq.html" class="nav-link p-0 text-muted">FAQ</a>
             </li>
           </ul>
         </div>
       </footer>
     </div>
+    <!--end of footer-->
+
+    <div class="animation" style="background-image: url('../images/snow1.webp');"></div>
+    <div class="animation" style="background-image: url('../images/snow2.webp');"></div>
+    <div class="animation" style="background-image: url('../images/snow3.avif');"></div>
     <!--Bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!--Js-->
-    <script src="../js/script.js"></script>
+    <script defer src="../js/script.js"></script>
   </body>
 </html>

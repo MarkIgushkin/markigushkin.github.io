@@ -1,16 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat&family=Courgette&family=Dancing+Script:wght@400;500;700&family=Fjalla+One&family=Francois+One&family=Freehand&family=Fuzzy+Bubbles:wght@700&family=Island+Moments&family=Josefin+Slab:wght@100&family=Klee+One&family=Nanum+Myeongjo&family=Open+Sans:wght@600&family=Pacifico&family=Permanent+Marker&family=Quicksand:wght@300&display=swap');
-
-
 
 #header{
-  background: url("../images/basehome.jpg") top/cover no-repeat;
+  background: url(../images/basehome.webp) top/cover no-repeat;
 }
 .carousel-inner h1{
     font-size: 90px;
-    /*font-family: Pacifico;*/
-}
-.carousel-inner h2{
-    /*font-family: Caveat;*/
 }
 .carousel-inner p{
     /*font-family: Quicksand*/
@@ -186,7 +179,8 @@ h1{
   font-weight: 600;
   border: 2px solid var(--a-hover-color);
   border-radius: 30px;
-  min-width: 250px;
+  width: 250px;
+  max-width: 80%;
   padding: 6px 15px;
   display: block;
   margin: 0 auto;
@@ -199,7 +193,9 @@ h1{
 }
 
 .stores img{
-  max-width: 200px;
+    width: 200px;
+    max-width: 100%;
+    min-width: 100px;
 }
 
 .store-name{
@@ -243,7 +239,8 @@ a.navbar-brand:hover {
 
 #remove-itm-btn, .close{
   border-radius: 30px;
-  min-width: 250px;
+  width: 250px;
+  max-width: 80%;
   padding: 6px 15px;
   font-size: 14px;
   font-weight: 600;
@@ -274,15 +271,15 @@ a.navbar-brand:hover {
 }
 
 #adv1{
-  background-image: url(../images/paper_quality.jpg);
+  background-image: url(../images/paper_quality.webp);
 }
 
 #adv2{
-  background-image: url(../images/foil.jpg);
+  background-image: url(../images/foil.webp);
 }
 
 #adv3{
-  background-image: url(../images/rounded_corners.jpg);
+  background-image: url(../images/rounded_corners.webp);
 }
 
 
@@ -538,7 +535,7 @@ a.nav-link:hover {
   height: 10px;
   line-height: 20px;
   text-align:center;
-  overflow: visable;
+  overflow: visible;
   margin: 75px 0;
   font-size: 28px;
   text-align: left!important;
@@ -588,7 +585,7 @@ a.nav-link:hover {
 }
 
 #about-banner .banner-image {
-  background: url(https://static.greetingsisland.com/images/theme/about/about-header-thumb.png) no-repeat center top;
+  background: url('../images/about-header-thumb.webp') no-repeat center top;
   background-size: cover;
   height: 318px;
   margin-bottom: -5.7%;
@@ -705,6 +702,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d9497a",endCo
 }
 }
 
+@media only screen and (max-width:768px){
+  .category2, .category3 {
+    margin-top: 100px;
+  }
+}
+
 .animation {
   display: block;
   height: 100%;
@@ -762,4 +765,40 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d9497a",endCo
 
 .about-main .divider span{
   padding: 0;
+}
+
+
+@media only screen and (max-width:640px){
+  .navbar-brand span{
+    display: none;
+  }
+
+  .carousel-item h1{
+    font-size: 45px;
+  }
+
+  #subscription *{
+    text-align: center;
+  }
+
+  #subscription h3{
+    font-size: 18px;
+  }
+
+  #subscription *{
+    font-size: 14px;
+  }
+
+  .filter-radio label {
+    margin-bottom: 10px;
+  }
+  
+  #summary *{
+    overflow-wrap: anywhere;
+  }
+
+}
+
+.table.stores{
+  overflow-wrap: anywhere;
 }
