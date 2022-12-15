@@ -1,0 +1,91 @@
+/* Font */
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* brand logo twinkle */
+.navbar-brand{
+    font-size: 20px; 
+    	margin: 10px;
+    	animation: changeshadow 1s  ease-in  infinite ;
+}
+@keyframes changeshadow {  
+    0%{ text-shadow: 0 0 4px #c00d0d}  
+    50%{ text-shadow: 0 0 40px #c00d0d}  
+    100%{ text-shadow: 0 0 4px #c00d0d}  
+}
+
+/* navbar text */
+.nav-link{
+    font-size: 20px; 
+    margin: 10px;   
+}
+.navbar-nav>li>a:hover{
+    background-color: #556E90 !important;
+    color: #fff !important;
+    }
+
+/* header dividing line */
+.navbar{
+    box-shadow: 20px 5px 5px grey;
+    
+}
+
+/* hide the browser's default radio button */
+.filter-radio input {
+    display: none;
+}
+
+/* product category */
+.filter-radio label {
+    cursor: pointer;
+    border: 2px solid var(--a-hover-color);
+    border-radius: 30px;
+    min-width: 100px;
+    padding: 6px 15px;
+    font-weight:500;
+}
+.filter-radio {
+    text-align: center;
+}
+.filter-radio>.col-12 label:hover{
+    background-color: #d93c1c !important;
+    color: #fff!important;
+    font-size: 20px !important;
+}
+/* Enlarge product image */
+.w-100:hover{
+     width: 120% !important;
+     margin-left: -25px;
+     margin-top: -10px;
+}
+
+/* product name */
+.p-name:hover{
+    background-image: linear-gradient(to top, #00C6FF, #8AFFD2); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;  
+}
+
+/* product emphasize */
+.pt-4 a{
+    text-decoration: none !important;
+}
+
+/* footer */
+.my-3>h5:hover{
+    background-image: linear-gradient(to top, #ffaa00, #ff8a8c); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;  
+}
+.mb-2>a{
+    background-image: linear-gradient(to top, #ffaa00, #8AFFD2); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;  
+}
+.mb-2>a:hover{
+    background-image: linear-gradient(to top, #2200ff, #ff8abf); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;  
+}
+
