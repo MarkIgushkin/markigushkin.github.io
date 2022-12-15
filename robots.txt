@@ -1,0 +1,8 @@
+# As an example, we have banned indexing of the checkout page
+User-agent: *
+Disallow: /checkout.html
+
+User-agent: GoogleBot
+Disallow: /checkout.html
+
+Host: https://markigushkin.github.io/

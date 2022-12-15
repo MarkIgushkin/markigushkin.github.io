@@ -1,0 +1,169 @@
+.fa-shopping-cart{
+    color:darkgreen;
+    font-size:larger;
+ 
+}
+
+
+.btn{
+    border:3px solid darkgreen;
+}
+
+.btn:hover{
+    color:darkred;
+    font-size:xx-large;
+    border:3px solid darkred;
+
+}
+
+.nav-link{
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-left: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+    color:rgb(0, 28, 0)!important;
+}
+
+
+
+.text-center{
+    margin-top: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 44px;
+    color: #9D0303;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* #all{
+
+        outline-style:dashed;
+        border: 1px solid #ccc; 
+        border-radius: 3px;
+        padding: 13px 14px;
+        width: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Microsoft soft";
+        text-align: center;
+
+} */
+
+
+.col-12{
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+input{
+    margin-left: 50px;
+    margin-right:10px;
+}
+
+label{
+    margin-right:30px;
+    border:2px solid darkred;
+    width: 140px;
+    border-radius: 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+
+.w-100{
+    margin-top: 20%;
+    border-radius:150px;
+    border:3px solid darkred;
+    width:60px;
+    margin-bottom: 50px;
+}
+
+.p-name {
+    color:rgb(66, 65, 65);
+    text-decoration: underline;
+    text-decoration-color: #9D0303;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-weight:500;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.price{
+    color:#9D0303;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: #9D0303;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-weight:900;
+    padding-left: 20px;
+}
+
+
+.col-md-4{
+    position: relative;
+}
+
+h3{
+    position: absolute;
+    top: 50%;
+    margin: 30% 0 0 0; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-weight:900;
+    font-size: 25px;
+    
+}
+
+
+.col-lg-7{
+    position: relative;
+}
+
+.px-4{
+    position: absolute;
+    left: 50%;
+    margin: 15% 0 0 -20%; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight:900;
+    font-size:20px;
+    text-decoration: underline;
+    text-decoration-color: #9D0303;
+    outline-style: dotted;
+
+}
+
+
+.col-lg-5{
+    position: relative;
+}
+
+.btn-lg{
+    position: absolute;
+    left: 50%;
+    margin: 50% 0 0 12%; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-weight:900;
+    height:60px;
+    font-size: 20px;
+}
+
+
+
+
+
+.py-5{
+    margin-top:300px;
+}
+
+
+h5{
+    margin-left: 6%;
+    font-weight: bolder;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
