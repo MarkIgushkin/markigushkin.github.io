@@ -183,7 +183,7 @@ $(document).ready(function(){
                 $("#summary").append("<div class=\"col-3 mb-4\"><p>" + value.name + "</p></div>");
                 $("#summary").append("<div class=\"col-2 mb-4\"><p>" + value.quantity + "</p></div>");
                 $("#summary").append("<div class=\"col-2 mb-4\"><p>€ " + value.price + "</p></div>");
-                $("#summary").append("<div class=\"col-2 mb-4\"><p>€ " + value.price * value.quantity + "</p></div>");
+                $("#summary").append("<div class=\"col-2 mb-4\"><p>€ " + (value.price * value.quantity).toFixed(2) + "</p></div>");
                 total += value.price * value.quantity;
             });
             
